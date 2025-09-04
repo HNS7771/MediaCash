@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaCash - High Tech • Gaming • Pop Culture</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Custom Tailwind Configuration & Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mc-yellow': '#facc15', // a bit brighter for web
+                        'mc-dark': '#303030',
+                        'mc-gray': '#f4f4f5',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .logo-container {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+    
+        .logo {
+            width: 100%;
+            height: auto;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            display: block;
+            /* Optional: Add border-radius or other styles */
+
+        }
+        #image{
+            width: 700px;   
+        }
+        
+    </style>
+<body class="bg-mc-gray text-mc-dark">
+      <!-- Floating Contact Bar -->
+      <div class="fixed bottom-6 right-6 z-50 flex items-center space-x-3 text-white p-2">
+        <a href="https://wa.me/yourphone" target="_blank" 
+           class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full 
+                  hover:bg-black hover:text-mc-yellow hover:scale-110 
+                  transition-all duration-300 transform shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.54 1.06l-1.519.76a11.042 11.042 0 006.115 6.115l.76-1.519a1 1 0 011.06-.54l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </a>
+        <button 
+            class="px-4 py-2 bg-black text-white font-bold text-sm rounded-md 
+                   hover:bg-mc-yellow hover:text-black hover:scale-105 
+                   transition-all duration-300 transform shadow-lg"
+            onclick="window.location.href='#contact'" 
+            type="button">
+            ÊTRE CONTACTÉ !
+        </button>
+    </div>
+
+    <header class="pt-8">
+        <div class="logo-container">
+            <img src="Pic/mc1.png" alt="MediaCash" class="logo">
+        </div>
+    </header>
+    <main class="w-full mx-auto overflow-hidden">
+        <!-- Hero Banner -->
+        <div class="relative w-full h-[400px] md:h-[700px] bg-mc-gray flex items-center justify-center top-0">
+          <!-- Dark Overlay Panel (Bottom Section) -->
+          <div class="absolute bottom-0 pt-8 pl-16 left-0 right-0 h-48 md:h-64 bg-mc-dark rounded-tl-3xl rounded-tr-3xl border-b-8 border-yellow-400 overflow-hidden">
+            <!-- Text Content -->
+            <div class="relative z-10 px-6 py-8 md:px-12 md:py-10 bottom-4">
+                <h1 class="text-2xl md:text-4xl font-bold text-white">
+                  <div class="block">L'allié idéal</div>
+                  <div class="block text-white mt-1 md:mt-2">pour vos besoins</div>
+                  <div class="block text-mc-yellow mt-3 md:mt-4">professionnels</div>
+                </h1>
+              </div>
+          </div>
+      
+          <!-- Product Image (Right Side, Overlapping) -->
+          <div class="absolute right-20 bottom-12 h-1000 w-1000 " >
+            <img id="image"
+            src="Pic/mc2.png" 
+            alt="Équipements professionnels" 
+            class="max-w-full h-auto object-contain"
+          />
+          </div>
+      
+          <!-- Yellow Bottom Border -->
+          <div class="absolute bottom-0 left-0 right-0 h-2 bg-mc-yellow"></div>
+        </div>
+      </main>
+      <section class="py-16 md:py-24" id="contact">
+        <div class="max-w-4xl mx-auto mt-10">
+            <form class="bg-black text-white p-8 rounded-lg shadow-lg border border-gray-700">
+              <!-- Titre -->
+              <h2 class="text-center text-xl font-bold mb-6">Je souhaite être contacté !</h2>
+          
+              <!-- Grille de champs -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <!-- Nom -->
+                <div>
+                  <input 
+                    type="text" 
+                    placeholder="Nom" 
+                    class="w-full px-4 py-3 bg-white text-yellow-500 border-2 border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded"
+                    required
+                  />
+                </div>
+          
+                <!-- Prénom -->
+                <div>
+                  <input 
+                    type="text" 
+                    placeholder="Prénom" 
+                    class="w-full px-4 py-3 bg-white text-yellow-500 border-2 border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded"
+                    required
+                  />
+                </div>
+          
+                <!-- Téléphone -->
+                <div>
+                  <input 
+                    type="tel" 
+                    placeholder="Téléphone" 
+                    class="w-full px-4 py-3 bg-white text-yellow-500 border-2 border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded"
+                    required
+                  />
+                </div>
+          
+                <!-- Email -->
+                <div>
+                  <input 
+                    type="email" 
+                    placeholder="Adresse Email" 
+                    class="w-full px-4 py-3 bg-white text-yellow-500 border-2 border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded"
+                    required
+                  />
+                </div>
+              </div>
+          
+              <!-- Case à cocher -->
+              <div class="flex items-center mb-4">
+                <input type="checkbox" id="accept" class="mr-2 h-4 w-4 text-yellow-500 border-2 border-yellow-500 rounded focus:ring-yellow-500" required />
+                <label for="accept" class="text-sm text-white">
+                  J'ai lu et j'accepte <a href="#" class="text-yellow-500 underline">les conditions générales d'utilisation</a>
+                </label>
+              </div>
+          
+              <!-- Mention légale -->
+              <p class="text-xs text-gray-400 text-center mb-4">
+                CONFORMÉMENT À LA LOI 09-08, VOUS DISPOSEZ D'UN DROIT D'ACCÈS, DE RECTIFICATION ET D'OPPOSITION AU TRAITEMENT DE VOS DONNÉES PERSONNELLES. CE TRAITEMENT A ÉTÉ NOTIFIÉ À LA CNPD AU TITRE DU RÉCEPISSE N°D-M-73/2020
+              </p>
+          
+              <!-- Bouton Envoyer -->
+              <button 
+                type="submit" 
+                class="w-full py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              >
+                ENVOYER
+              </button>
+            </form>
+          </div>
+      </section>
+            <!-- Qui sommes-nous? Section -->
+        <section class="py-16 md:py-24 ">
+                <div class="container mx-auto px-6 max-w-4xl text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4">Qui sommes-nous ?</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Enseigne de magasins lancée en février 2020 à Casablanca, avec 4 magasins, à date. Spécialisée dans la revente de produits high-tech, de téléphonie, d'informatique, de multimédia, d'audio, de gaming, de pop culture et de musique.
+                    </p>
+                </div>
+            </section>
+            <section class="py-16 md:py-24">
+                <div class="py-12 bg-mc-gray">
+                    <div class="max-w-6xl mx-auto px-6">
+                      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Galerie</h2>
+                  
+                      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Image 1 -->
+                        <div class="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                          <img 
+                            src="Pic/mc1.png" 
+                            alt="Pic1" 
+                            class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              PIC1
+                            </p>
+                          </div>
+                        </div>
+                  
+                        <!-- Image 2 -->
+                        <div class="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                          <img 
+                            src="Pic/mc1.png" 
+                            alt="Pic2" 
+                            class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              PIC2
+                            </p>
+                          </div>
+                        </div>
+                  
+                        <!-- Image 3 -->
+                        <div class="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                          <img 
+                            src="Pic/mc1.png" 
+                            alt="Pic3" 
+                            class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              PIC3
+                            </p>
+                          </div>
+                        </div>
+                         <!-- Image 4 -->
+                         <div class="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <img 
+                              src="Pic/mc1.png" 
+                              alt="Pic4" 
+                              class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
+                              <p class="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                PIC4
+                              </p>
+                            </div>
+                          </div>
+                         <!-- Image 5 -->
+                         <div class="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <img 
+                              src="Pic/mc1.png" 
+                              alt="Pic5" 
+                              class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
+                              <p class="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                PIC5
+                              </p>
+                            </div>
+                          </div>
+                         <!-- Image 6 -->
+                         <div class="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <img 
+                              src="Pic/mc1.png" 
+                              alt="Pic6" 
+                              class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
+                              <p class="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                PIC6
+                              </p>
+                            </div>
+                          </div>     
+                      </div>
+                    </div>
+                  </div>
+                  
+            </section>            
+            <!-- Notre offre produits Section -->
+            <section class="py-16 md:py-24 bg-mc-gray">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold mb-12 text-center">Notre offre produits</h2>
+                    <div class="max-w-5xl mx-auto">
+                        <!-- Table Header -->
+                        <div class="hidden md:grid grid-cols-5 gap-4 text-center font-bold mb-4">
+                            <div class="col-span-1"></div>
+                            <div class="bg-mc-yellow py-2 rounded-md">Neuf</div>
+                            <div class="bg-mc-yellow py-2 rounded-md">Occasion premium</div>
+                            <div class="bg-mc-yellow py-2 rounded-md">Reprise</div>
+                            <div class="bg-mc-yellow py-2 rounded-md">Réparation</div>
+                        </div>
+                        <!-- Table Body -->
+                        <div class="space-y-4 bg-mc-gray rounded-3xl">
+                            <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-computer-line text-2xl text-mc-dark"></i>PC, PC Gamers & MacBook</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                            </div>
+                             <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-smartphone-line text-2xl text-mc-dark"></i>Smartphones & tablettes</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                            </div>
+                             <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-usb-line text-2xl text-mc-dark"></i>Accessoires téléphonie</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                            </div>
+                             <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-keyboard-box-line text-2xl text-mc-dark"></i>Accessoires informatique</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                            </div>
+                            <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-headphone-line text-2xl text-mc-dark"></i>Casques & écouteurs</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                            </div>
+                            <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-speaker-line text-2xl text-mc-dark"></i>Enceintes audio</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                            </div>
+                            <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-gamepad-line text-2xl text-mc-dark"></i>Consoles, accessoires et jeux-vidéos</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                            </div>
+                            <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-disc-line text-2xl text-mc-dark"></i>Lecteurs vinyles & vinyles</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                            </div>
+                            <!-- Product Row -->
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center p-4 rounded-lg bg-mc-gray">
+                                <div class="col-span-2 md:col-span-1 flex items-center gap-4 font-semibold"><i class="ri-user-smile-line text-2xl text-mc-dark"></i>Figurines & produits dérivés sous licence</div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-circle-fill text-2xl text-mc-yellow"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                                <div class="flex justify-center"><i class="ri-checkbox-blank-circle-line text-2xl text-gray-400"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Nos solutions Section -->
+            <section class="">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold mb-12 text-center">Nos solutions</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Solution Card -->
+                        <div class="bg-mc-yellow p-6 rounded-3xl text-center">
+                            <i class="ri-shopping-cart-2-line text-3xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-center">Vente de produits neufs</h3>
+                            <ul class="list-disc list-inside text-sm space-y-2 text-left">
+                                <div class="bg-mc-dark p-0.5 rounded-lg"></div>
+                                <li>Conseil personnalisé avec possibilité de visite en entreprise</li>
+                                <li>Large choix de produits et marques disponibles</li>
+                                <li>Prise en charge des demandes spécifiques (quantités, produits rares)</li>
+                                <li>Remises selon volumes et facturation immédiate</li>
+                                <li>Garanties fabricants</li>
+                                <li>Échange et remplacement de matériel en cas de panne</li>
+                            </ul>
+                        </div>
+                        <!-- Solution Card -->
+                        <div class="bg-mc-yellow p-6 rounded-3xl text-center">
+                            <i class="ri-price-tag-3-line text-3xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-center">Vente de produits occasion premium</h3>
+                            <ul class="list-disc list-inside text-sm space-y-2 text-left">
+                                <div class="bg-mc-dark p-0.5 rounded-lg"></div>
+                                <li>Produits vérifiés et testés, garantis jusqu'à 12 mois</li>
+                                <li>Large choix de PC, MacBook, smartphones, tablettes, consoles et jeux</li>
+                                <li>Économies de 25 à 70% par rapport au neuf</li>
+                                <li>Facturation immédiate</li>
+                                <li>Échange sous garantie si nécessaire</li>
+                            </ul>
+                        </div>
+                        <!-- Solution Card -->
+                        <div class="bg-mc-yellow p-6 rounded-3xl text-center">
+                            <i class="ri-loop-right-line text-3xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-center">Reprise</h3>
+                            <ul class="list-disc list-inside text-sm space-y-2 text-left"><br>
+                                <div class="bg-mc-dark p-0.5 rounded-lg"></div>
+                                <li>Possibilité de reprise au juste prix de votre matériel high-tech</li>
+                                <li>Paiement immédiat en espèces ou en bon d'achat pour renouveler votre matériel</li>
+                                <li>Avantage écologique et environnemental dans le cadre de votre démarche RSE</li>
+                                <li>Possibilité de donner une seconde vie à vos appareils (non revendables), nous les recyclons dans nos ateliers avant de les offrir à des causes des oeuvres caritatives</li>
+                            </ul>
+                        </div>
+                        <!-- Solution Card -->
+                        <div class="bg-mc-yellow p-6 rounded-3xl text-center">
+                            <i class="ri-tools-line text-3xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-center">Réparation</h3>
+                            <ul class="list-disc list-inside text-sm space-y-2 text-left"><br>
+                                <div class="bg-mc-dark p-0.5 rounded-lg"></div>
+                                <li>Réparation rapide de vos appareils multimédia dans notre atelier « MediaLabo »</li>
+                                <li>Diagnostic gratuit et réparation express</li>
+                                <li>Transfert, sauvegarde et restauration des données</li>
+                                <li>Techniciens certifiés, pièces d'origine ou de qualité originale</li>
+                                <li>Réparation avec garantie jusqu'à 6 mois</li>
+                                <li>Interventions 7 jours/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nos Marques Section -->
+            <section class="py-16 md:py-4 bg-mc-gray">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold mb-12 text-center">Nos Marques</h2>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 items-center brand-logo-container">
+                        <!-- Brand Logos - Add all of them here -->
+                        <div class="h-16 w-auto mx-auto border-2 rounded-xl flex items-center justify-center"><img src="MediaPic/Apple.webp" alt="Apple" class="py-2 px-2"></div>
+                        <div class="h-16 w-52 mx-auto border-2 rounded-xl flex items-center justify-center"><img src="MediaPic/Samsung_wordmark.svg" alt="Samsung" class="py-2 px-2"></div>
+                        <div class="h-16 w-35 ml-14 mx-auto border-2 rounded-xl flex items-center justify-center"><img src="MediaPic/Dell_Logo.svg.png" alt="Dell" class="py-2 px-2 h-20"></div>
+                        <div class="h-16 w-auto mx-auto border-2 rounded-xl"><img src="MediaPic/HP_logo_2008.svg" alt="HP" class="py-2 px-2"></div>
+                        <div class="h-16 w-auto mx-auto border-2 rounded-xl"><img src="" alt="Asus" class="py-2 px-2"></div>
+                        <div class="h-16 w-auto mx-auto border-2 rounded-xl"><img src="MediaPic/Lenovo_logo_(English).svg" alt="Lenovo" class="py-2 px-2"></div>
+                        <div class="h-16 w-auto mx-auto border-2 rounded-xl"><img src="" alt="MSI" class="py-2 px-2"></div>
+                        <div><img src="MediaPic/Belkin.svg" alt="Belkin" class=""></div>
+                        <div><img src="MediaPic/Sony_logo.svg" alt="Sony" class=""></div>
+                        <div><img src="MediaPic/bose.svg" alt="Bose" class=""></div>
+                        <div><img src="MediaPic/Marshall_logo.svg" alt="Marshall" class=""></div>
+                        <div><img src="MediaPic/JBL-Logo.wine.svg" alt="JBL" class=""></div>
+                        <div><img src="MediaPic/Sonos_(Unternehmen)_logo.svg" alt="Sonos" class=""></div>
+                        <div><img src="MediaPic/western-digital-2.svg" alt="Western Digital" class=""></div>
+                        <div><img src="" alt="Audio-Technica" class=""></div>
+                        <div><img src="MediaPic/Jabra_logo.svg" alt="Jabra" class=""></div>
+                        <div><img src="MediaPic/logitech-logo.svg" alt="Logitech" class=""></div>
+                        <div><img src="MediaPic/rhinoshield-logo.svg" alt="Rhinoshield" class=""></div>
+                        <div><img src="MediaPic/TPLINK_Logo_2.svg" alt="TP-Link" class=""></div>
+                        <div><img src="MediaPic/D-Link_wordmark.svg" alt="D-Link" class=""></div>
+                        <div><img src="MediaPic/" alt="PlayStation" class=""></div>
+                        <div><img src="MediaPic/" alt="Nintendo Switch" class=""></div>
+                        <div><img src="MediaPic/Microsoft_logo_(2012).svg" alt="Microsoft" class=""></div>
+                        <div><img src="MediaPic/XBOX_logo_2012.svg" alt="Xbox" class=""></div>
+                        <div><img src="MediaPic/" alt="UGREEN" class=""></div>
+                        <div><img src="MediaPic/" alt="Jaym" class=""></div>
+                        <div><img src="MediaPic/D-Link_wordmark.svg" alt="D-Link" class=""></div>
+                        <div><img src="MediaPic/Epson_logo.svg" alt="Epson" class=""></div>
+                        <div><img src="MediaPic/" alt="Nintendo Switch" class=""></div>
+                        <div><img src="MediaPic/SanDisk_Logo_2007.svg" alt="SanDisk" class=""></div>
+                        <div><img src="MediaPic/Canon_wordmark.svg" alt="Canon" class=""></div>
+                        <div><img src="MediaPic/" alt="Qdos" class=""></div>
+                        <div><img src="MediaPic/Logo_Konix.svg" alt="Konix" class=""></div>
+                    </div>
+                </div>
+            <!-- </section>
+
+            Notre engagement Section
+            <section class="py-16 md:py-24">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                         <div class="inline-block bg-mc-yellow px-6 py-3 rounded-lg">
+                            <h2 class="text-3xl font-bold">Notre engagement</h2>
+                        </div>
+                    </div>
+                    <p class="text-center text-xl text-gray-700 max-w-4xl mx-auto mb-16">
+                        Assurer la satisfaction de nos clients tout en offrant le meilleur rapport qualité/prix sur le marché.
+                    </p>
+                    
+                    <div class="space-y-12 max-w-4xl mx-auto"> -->
+                         <!-- Engagement Item -->
+                        <!-- <div class="relative p-6 border-4 border-mc-yellow rounded-lg">
+                             <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-mc-gray p-2 rounded-full"><i class="ri-customer-service-2-line text-3xl text-mc-dark"></i></div>
+                            <h3 class="text-2xl font-bold text-center mb-4">Des services de qualité :</h3> -->
+                            <!-- <div class="bg-mc-dark p-0.5 rounded-lg w-1/2 mx-auto"></div><br> -->
+                            <!-- <ul class="list-disc list-inside space-y-2 text-gray-600"> -->
+                                <!-- <div class="bg-mc-dark p-0.5 rounded-lg"></div> -->
+                                <!-- <li>Reprise de vos anciens appareils contre paiement ou bon d'achat.</li>
+                                <li>Livraison gratuite avec installation, mise en marche et conseils.</li>
+                                <li>En cas de panne sous garantie, produits de remplacement et intervention express par nos techniciens qualifiés.</li>
+                            </ul>
+                        </div> -->
+                         <!-- Engagement Item -->
+                        <!-- <div class="relative p-6 border-4 border-mc-yellow rounded-lg">
+                            <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-mc-gray p-2 rounded-full"><i class="ri-award-line text-3xl text-mc-dark"></i></div>
+                            <h3 class="text-2xl font-bold text-center mb-4">Le meilleur rapport qualité/prix :</h3> -->
+                            <!-- <div class="bg-mc-dark p-0.5 rounded-lg w-1/2 mx-auto"></div><br> -->
+                            <!-- <p class="text-gray-600 text-center">
+                                Nous offrons des produits neufs à des prix compétitifs et des produits d'occasion premium, garantis 12 mois. <br> Paiement immédiat ou différé disponible par carte bancaire, virement ou chèque.
+                            </p>
+                        </div> -->
+                         <!-- Engagement Item -->
+                        <!-- <div class="relative p-6 border-4 border-mc-yellow rounded-lg">
+                             <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-mc-gray p-2 rounded-full"><i class="ri-shake-hands-line text-3xl text-mc-dark"></i></div>
+                            <h3 class="text-2xl font-bold text-center mb-4">Une expérience client irréprochable :</h3> -->
+                            <!-- <div class="bg-mc-dark p-0.5 rounded-lg w-1/2 mx-auto"></div><br>
+                            <p class="text-gray-600 text-center">
+                                À l'écoute de vos besoins, avec des conseils personnalisés par un personnel qualifié.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <section class="mt-12">
+              <div class="bg-yellow-500 font-bold text-2xl px-28 py-4 rounded-r-3xl inline-block">
+                Notre engagement
+              </div>
+              </section>
+          
+              <div class="container mx-auto px-4 py-6 max-w-3xl">
+          
+              <!-- Intro Text -->
+              <p class="font-semibold mb-8 text-center">
+                Assurer la satisfaction de nos clients tout en offrant le meilleur rapport qualité/prix sur le marché.
+              </p>
+          
+              <!-- Section 1: Services de qualité -->
+              <div class="relative border-r-8 border-b-8 border-yellow-500 p-5 mb-6 rounded-r-xl rounded-l-xl overflow-hidden">
+          
+                <div class="flex items-start">
+                  <img src="https://cdn-icons-png.flaticon.com/512/1778/1778062.png" alt="cadeau" class="w-6 h-6 mr-3 mt-1" />
+                  <div>
+                    <h2 class="font-bold text-lg border-b-2 border-gray-800 inline-block mb-2 ml-6">Des services de qualité:</h2>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-md ml-6">
+                      <li>Reprise de vos anciens appareils contre paiement ou bon d'achat.</li>
+                      <li>Livraison gratuite avec installation, mise en marche et conseils.</li>
+                      <li>En cas de panne sous garantie, produits de remplacement et intervention express par nos techniciens qualifiés.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Section 2: Rapport qualité/prix -->
+              <div class="relative border-l-8 border-t-8 border-yellow-500 p-5 mb-6 rounded-l-xl rounded-t-xl overflow-hidden">
+          
+                <div class="flex items-start">
+                  <div>
+                    <h2 class="font-bold text-lg border-b-2 border-gray-800 inline-block mb-2 ml-80">Le meilleur rapport qualité/prix:</h2>
+                    <p class="text-md mt-2 mr-4 pl-6">
+                      Nous offrons des produits neufs à des prix compétitifs et des produits d'occasion premium, garantis 12 mois.
+                    </p>
+                    <p class="text-md mt-1 pl-6">
+                      Paiement immédiat ou différé disponible par carte bancaire, virement ou chèque.
+                    </p>
+                  </div>
+                  <img src="https://cdn-icons-png.flaticon.com/512/315/315743.png" alt="badge" class="w-7 h-7 mr-6 mt-1" />
+          
+                </div>
+              </div>
+          
+              <!-- Section 3: Expérience client -->
+              <div class="relative border-t-8 border-r-8 border-yellow-500 p-5 rounded-t-xl rounded-r-xl overflow-hidden">
+          
+                <div class="flex items-start">
+                  <img src="https://cdn-icons-png.flaticon.com/512/179/179702.png" alt="main" class="w-6 h-6 mr-3 mt-1" />
+                  <div>
+                    <h2 class="font-bold text-lg border-b-2 border-gray-800 inline-block mb-2 ml-6">Une expérience client irréprochable:</h2>
+                    <p class="text-md mt-2 ml-6">
+                      À l’écoute de vos besoins, avec des conseils personnalisés par un personnel qualifié.
+                    </p>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          
+            <section class="py-16 md:py-24">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Titre -->
+                    <h1 class="text-2xl md:text-3xl font-bold text-center text-mc-dark mb-4">
+                      Découvrez Media<span class="text-mc-yellow">cash</span>
+                    </h1>
+                    <p class="text-center text-mc-dark mb-8">
+                      Le partenaire idéal pour vos besoins professionnels
+                    </p>
+                
+                    <!-- Conteneur vidéo responsive (16:9) -->
+                    <div class="aspect-video bg-black rounded-lg overflow-hidden shadow-xl">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/RhLzUQr2N1k"
+                        title="Mediacash : Le partenaire idéal pour vos besoins professionnels"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ils nous font confiance Section -->
+            <section class="py-16 md:py-24 bg-mc-gray">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold mb-12 text-center">Ils nous font confiance</h2>
+                    <div class="p-8 border rounded-lg">
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-12 items-center justify-items-center client-logo-container">
+                            <img src="assets/images/clients/yamed.png" alt="Yamed Group">
+                            <img src="assets/images/clients/tectra.png" alt="Tectra">
+                            <img src="assets/images/clients/intelcia.png" alt="Intelcia">
+                            <img src="assets/images/clients/capital-foncier.png" alt="Capital Foncier">
+                            <img src="assets/images/clients/medical-market.png" alt="Medical Market">
+                            <img src="assets/images/clients/bic.png" alt="BIC">
+                            <img src="assets/images/clients/salesforce.png" alt="Salesforce">
+                            <img src="assets/images/clients/eskimos.png" alt="Eskimos">
+                            <img src="assets/images/clients/wavestone.png" alt="Wavestone">
+                            <img src="assets/images/clients/kenzi-tower-hotel.png" alt="Kenzi Tower Hotel">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Nos Magasins Section -->
+            <section class="py-16 md:py-24">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold mb-12 text-center">Nos Magasins</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <!-- Store Location -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                                <img src="assets/images/map-ziraoui.png" alt="Map of Ziraoui store" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-semibold">307, boulevard Ziraoui</h3>
+                            <p class="text-lg font-bold text-mc-yellow"><i class="ri-phone-fill"></i> 05 22 20 20 55</p>
+                        </div>
+                        <!-- Store Location -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                                <img src="assets/images/map-maarouf.png" alt="Map of Sidi Maarouf store" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-semibold">O'village, Sidi Maarouf</h3>
+                            <p class="text-lg font-bold text-mc-yellow"><i class="ri-phone-fill"></i> 05 20 50 94 62</p>
+                        </div>
+                        <!-- Store Location -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                                <img src="assets/images/map-california.png" alt="Map of California Mall store" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-semibold">Californie Mall</h3>
+                            <p class="text-lg font-bold text-mc-yellow"><i class="ri-phone-fill"></i> 05 22 52 69 34</p>
+                        </div>
+                        <!-- Store Location -->
+                        <div class="flex flex-col items-center">
+                          <div class="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                              <img src="assets/images/map-california.png" alt="Map of California Mall store" class="w-full h-full object-cover">
+                          </div>
+                          <h3 class="text-xl font-semibold">Rabat</h3>
+                          <p class="text-lg font-bold text-mc-yellow"><i class="ri-phone-fill"></i> 05 22 52 69 34</p>
+                      </div>
+                      <!-- Store Location -->
+                      <div class="flex flex-col items-center">
+                        <div class="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                            <img src="assets/images/map-california.png" alt="Map of California Mall store" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold">Rabat Center</h3>
+                        <p class="text-lg font-bold text-mc-yellow"><i class="ri-phone-fill"></i> 05 22 52 69 34</p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer / Contact Section -->
+        <section class="bg-mc-gray pt-16 pb-8">
+            <div class="container mx-auto px-6 text-center">
+                <!-- Contact on Laptop Screen -->
+                <div class="relative w-full max-w-2xl mx-auto">
+                    <img src="Pic/mcc.png" alt="Laptop" class="w-full h-auto">
+                </div>
+                <br><br>
+                <!-- Icon Bar -->
+                <div class="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
+                   <img src="Pic/unnamed.png" alt="" width="600px">
+                </div>
+            </div>
+        </section>  
+        <footer class="bg-mc-dark pt-16 pb-8">
+            <!-- QR Code & Socials -->
+            <div class="flex flex-col items-center gap-6"><h2 class="text-2xl font-bold text-white">Qr Code</h2>
+                <img src="assets/images/qrcode.png" alt="QR Code" class="w-32 h-32">
+                <div class="flex gap-4 text-2xl">
+                    <a href="#" class="text-gray-500 hover:text-mc-dark"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-mc-dark"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-mc-dark"><i class="ri-facebook-box-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-mc-dark"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
